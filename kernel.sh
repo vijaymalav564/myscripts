@@ -48,7 +48,7 @@ KERNEL_DIR="$(pwd)"
 BASEDIR="$(basename "$KERNEL_DIR")"
 
 # The name of the Kernel, to name the ZIP
-ZIPNAME="Lockdown"
+ZIPNAME="Lockdown-EAS"
 
 # Build Author
 # Take care, it should be a universal and most probably, case-sensitive
@@ -73,7 +73,7 @@ COMPILER=clang
 
 # Specify linker.
 # 'ld.lld'(default)
-LINKER=ld.lld
+# LINKER=ld.lld
 
 # Clean source prior building. 1 is NO(default) | 0 is YES
 INCREMENTAL=1
@@ -283,8 +283,7 @@ build_kernel() {
 			CC=clang \
 			AR=llvm-ar \
 			OBJDUMP=llvm-objdump \
-			STRIP=llvm-strip \
-			LD="$LINKER"
+			STRIP=llvm-strip 
 		)
 	elif [ $COMPILER = "gcc" ]
 	then
