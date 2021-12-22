@@ -73,7 +73,7 @@ COMPILER=clang
 
 # Specify linker.
 # 'ld.lld'(default)
-# LINKER=ld.lld
+LINKER=ld.lld
 
 # Clean source prior building. 1 is NO(default) | 0 is YES
 INCREMENTAL=1
